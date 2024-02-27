@@ -1,0 +1,321 @@
+{
+  "resources": [
+    {
+      "name": "execucao",
+      "type": "table",
+      "path": "data/execucao.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "hash": "sha256:7a51e182ff451c4d19a5961ed4861e8af459e5a6026c17bdf513406a82845b32",
+      "bytes": 506056383,
+      "fields": 29,
+      "rows": 3328289,
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "integer"
+          },
+          {
+            "name": "mes_cod",
+            "type": "integer"
+          },
+          {
+            "name": "uo_cod",
+            "type": "integer"
+          },
+          {
+            "name": "ue_cod",
+            "type": "integer"
+          },
+          {
+            "name": "upg_cod",
+            "type": "integer"
+          },
+          {
+            "name": "uo_fin_cod",
+            "type": "integer"
+          },
+          {
+            "name": "funcao_cod",
+            "type": "integer"
+          },
+          {
+            "name": "programa_cod",
+            "type": "integer"
+          },
+          {
+            "name": "acao_cod",
+            "type": "integer"
+          },
+          {
+            "name": "grupo_cod",
+            "type": "integer"
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "integer"
+          },
+          {
+            "name": "iag_cod",
+            "type": "integer"
+          },
+          {
+            "name": "fonte_cod",
+            "type": "integer"
+          },
+          {
+            "name": "ipu_cod",
+            "type": "integer"
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "integer"
+          },
+          {
+            "name": "elemento_dea_cod",
+            "type": "integer"
+          },
+          {
+            "name": "item_dea_cod",
+            "type": "integer"
+          },
+          {
+            "name": "num_processo_compra",
+            "type": "string"
+          },
+          {
+            "name": "licitacao_modalidade",
+            "type": "string"
+          },
+          {
+            "name": "cnpj_cpf_formatado",
+            "type": "string"
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "integer"
+          },
+          {
+            "name": "num_contrato_entrada",
+            "type": "integer"
+          },
+          {
+            "name": "num_obra",
+            "type": "integer"
+          },
+          {
+            "name": "num_empenho",
+            "type": "integer"
+          },
+          {
+            "name": "vlr_empenhado",
+            "type": "number"
+          },
+          {
+            "name": "vlr_liquidado",
+            "type": "number"
+          },
+          {
+            "name": "vlr_liquidado_retido",
+            "type": "number"
+          },
+          {
+            "name": "vlr_pago_orcamentario",
+            "type": "number"
+          },
+          {
+            "name": "vlr_pago_financeiro",
+            "type": "number"
+          }
+        ]
+      },
+      "profile": "tabular-data-resource"
+    },
+    {
+      "name": "restos_pagar",
+      "type": "table",
+      "path": "data/restos_pagar.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "hash": "sha256:ab44435c86511a69a44396434e79920dfa4f3fa70e9ae2c88c5f9d6cccb8fe9d",
+      "bytes": 254992008,
+      "fields": 41,
+      "rows": 1151701,
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "integer"
+          },
+          {
+            "name": "ano_rp",
+            "type": "integer"
+          },
+          {
+            "name": "mes_cod",
+            "type": "integer"
+          },
+          {
+            "name": "uo_cod",
+            "type": "integer"
+          },
+          {
+            "name": "ue_cod",
+            "type": "integer"
+          },
+          {
+            "name": "uo_fin_cod",
+            "type": "integer"
+          },
+          {
+            "name": "upg_cod",
+            "type": "integer"
+          },
+          {
+            "name": "funcao_cod",
+            "type": "integer"
+          },
+          {
+            "name": "acao_cod",
+            "type": "integer"
+          },
+          {
+            "name": "grupo_cod",
+            "type": "integer"
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "integer"
+          },
+          {
+            "name": "iag_cod",
+            "type": "integer"
+          },
+          {
+            "name": "fonte_cod",
+            "type": "integer"
+          },
+          {
+            "name": "ipu_cod",
+            "type": "integer"
+          },
+          {
+            "name": "elemento_cod",
+            "type": "integer"
+          },
+          {
+            "name": "item_cod",
+            "type": "integer"
+          },
+          {
+            "name": "elemento_dea_cod",
+            "type": "integer"
+          },
+          {
+            "name": "item_dea_cod",
+            "type": "integer"
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "integer"
+          },
+          {
+            "name": "num_empenho",
+            "type": "integer"
+          },
+          {
+            "name": "cnpj_cpf_formatado",
+            "type": "string"
+          },
+          {
+            "name": "razao_social_credor",
+            "type": "string"
+          },
+          {
+            "name": "num_contrato_entrada",
+            "type": "integer"
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "integer"
+          },
+          {
+            "name": "num_obra",
+            "type": "integer"
+          },
+          {
+            "name": "num_processo_compra",
+            "type": "string"
+          },
+          {
+            "name": "vlr_inscrito_rpnp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_cancelado_rpnp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_restabelecido_rpnp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_despesa_liquidada_rpnp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_despesa_liquidada_pagar",
+            "type": "number"
+          },
+          {
+            "name": "vlr_saldo_rpp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_saldo_rpnp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_inscrito_rpp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_cancelado_rpp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_desconto_rpp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_restabelecido_rpp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_pago_rpp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_anulacao_pagamento_rpp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_retencao_rpp",
+            "type": "number"
+          },
+          {
+            "name": "vlr_anulacao_retencao_rpp",
+            "type": "number"
+          }
+        ]
+      },
+      "profile": "tabular-data-resource"
+    }
+  ],
+  "name": "siafi"
+}

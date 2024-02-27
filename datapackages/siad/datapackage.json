@@ -1,0 +1,121 @@
+{
+  "name": "armazem-siad-dados",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "compras",
+      "type": "table",
+      "profile": "tabular-data-resource",
+      "path": "data/compras.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:8023d105d7fb956f98bf13b0f748eae75fd7ba30e7a8cd8a3d647834d08bde11",
+      "bytes": 30702990,
+      "fields": 19,
+      "rows": 494357,
+      "schema": {
+        "fields": [
+          {
+            "name": "num_processo_compra",
+            "type": "string",
+            "source": "Número Processo -  Formatado"
+          },
+          {
+            "name": "objeto_processo",
+            "type": "string",
+            "source": "Objeto Processo"
+          },
+          {
+            "name": "vlr_total_homologado",
+            "type": "number",
+            "source": "Valor Total Homologado"
+          },
+          {
+            "name": "vlr_total_atualizado",
+            "type": "number",
+            "source": "Valor Total Atualizado"
+          },
+          {
+            "name": "uo_cod",
+            "type": "integer",
+            "source": "Código Unidade Orçamentária"
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "integer",
+            "source": "Código Elemento Item Despesa"
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "integer",
+            "source": "Número Contrato"
+          },
+          {
+            "name": "situacao_contrato_saida",
+            "type": "string",
+            "source": "Situação Contrato"
+          },
+          {
+            "name": "tipo_contrato_saida",
+            "type": "string",
+            "source": "Descrição Tipo de Contrato"
+          },
+          {
+            "name": "is_execucao_continuada",
+            "type": "boolean",
+            "source": "Indicador Execução Continuada"
+          },
+          {
+            "name": "url_arquivos_contrato_saida",
+            "type": "string",
+            "source": "Contrato_TermoAditivo Arquivos"
+          },
+          {
+            "name": "objeto_contrato_saida",
+            "type": "string",
+            "source": "Objeto Contrato"
+          },
+          {
+            "name": "data_assinatura_contrato_saida",
+            "type": "datetime",
+            "source": "Data Assinatura Contrato"
+          },
+          {
+            "name": "data_inicio_vigencia_contrato_saida",
+            "type": "datetime",
+            "source": "Data Início Vigência Contrato"
+          },
+          {
+            "name": "data_limite_vigencia_contrato_saida",
+            "type": "datetime",
+            "source": "Data Limite Vigência Contrato"
+          },
+          {
+            "name": "data_termino_vigencia_contrato_saida",
+            "type": "datetime",
+            "source": "Data Término Vigência Contrato"
+          },
+          {
+            "name": "data_publicacao_contrato_saida",
+            "type": "datetime",
+            "source": "Data Publicação Contrato"
+          },
+          {
+            "name": "orgao_cod",
+            "type": "integer",
+            "source": "Código Órgão/Entidade Contratante"
+          },
+          {
+            "name": "situacao_processo",
+            "type": "string",
+            "source": "Situação Processo"
+          }
+        ]
+      }
+    }
+  ],
+  "updated_at": "2024-02-23T16:00:36"
+}

@@ -1,0 +1,34 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "projetos_vale",
+      "path": "projetos_vale.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "num_contrato_entrada",
+            "type": "integer"
+          },
+          {
+            "name": "projeto",
+            "type": "string"
+          },
+          {
+            "name": "anexo",
+            "type": "string"
+          },
+          {
+            "name": "valor_projeto",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ],
+  "name": "acordo_vale_brumadinho"
+}

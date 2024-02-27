@@ -1,0 +1,395 @@
+{
+  "name": "armazem-siafi-dados",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "execucao",
+      "type": "table",
+      "profile": "tabular-data-resource",
+      "path": "data/execucao.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:41ad921189d65b13a4c02e0b3b2c92ee550edc6ce272b2345950121ccc03267f",
+      "bytes": 29623744,
+      "fields": 29,
+      "rows": 1115777,
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "integer",
+            "source": "Ano de Exercício"
+          },
+          {
+            "name": "mes_cod",
+            "type": "integer",
+            "source": "Mês - Numérico"
+          },
+          {
+            "name": "uo_cod",
+            "type": "integer",
+            "source": "Unidade Orçamentária - Código"
+          },
+          {
+            "name": "ue_cod",
+            "type": "integer",
+            "source": "Unidade Executora - Código"
+          },
+          {
+            "name": "upg_cod",
+            "type": "integer",
+            "source": "Unid Programação Gasto - Código"
+          },
+          {
+            "name": "uo_fin_cod",
+            "type": "integer",
+            "source": "Unid Orçam Financiadora Gasto - Cod"
+          },
+          {
+            "name": "funcao_cod",
+            "type": "integer",
+            "source": "Função - Código"
+          },
+          {
+            "name": "programa_cod",
+            "type": "integer",
+            "source": "Programa - Código"
+          },
+          {
+            "name": "acao_cod",
+            "type": "integer",
+            "source": "Projeto_Atividade - Código"
+          },
+          {
+            "name": "grupo_cod",
+            "type": "integer",
+            "source": "Grupo Despesa - Código"
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "integer",
+            "source": "Modalidade Aplicação - Código"
+          },
+          {
+            "name": "iag_cod",
+            "type": "integer",
+            "source": "Identificador Orçamento - Código"
+          },
+          {
+            "name": "fonte_cod",
+            "type": "integer",
+            "source": "Fonte Recurso - Código"
+          },
+          {
+            "name": "ipu_cod",
+            "type": "integer",
+            "source": "Procedência - Código"
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "integer",
+            "source": "Elemento Item Despesa - Código"
+          },
+          {
+            "name": "elemento_dea_cod",
+            "type": "integer",
+            "source": "Elemento origem DEA"
+          },
+          {
+            "name": "item_dea_cod",
+            "type": "integer",
+            "source": "Item origem DEA"
+          },
+          {
+            "name": "num_processo_compra",
+            "type": "string",
+            "source": "Número Processo Compra SIAD"
+          },
+          {
+            "name": "licitacao_modalidade",
+            "type": "string",
+            "source": "Licitação - Descrição da Modalidade"
+          },
+          {
+            "name": "cnpj_cpf_formatado",
+            "type": "string",
+            "source": "CNPJ_CPF Credor - Formatado"
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "integer",
+            "source": "ContratoConvênio Saída"
+          },
+          {
+            "name": "num_contrato_entrada",
+            "type": "integer",
+            "source": "ContratoConvênio Entrada"
+          },
+          {
+            "name": "num_obra",
+            "type": "integer",
+            "source": "Número Obra"
+          },
+          {
+            "name": "num_empenho",
+            "type": "integer",
+            "source": "Número Empenho"
+          },
+          {
+            "name": "vlr_empenhado",
+            "type": "number",
+            "source": "Valor Despesa Empenhada"
+          },
+          {
+            "name": "vlr_liquidado",
+            "type": "number",
+            "source": "Valor Despesa Liquidada"
+          },
+          {
+            "name": "vlr_liquidado_retido",
+            "type": "number",
+            "source": "Valor Liquidado Retido"
+          },
+          {
+            "name": "vlr_pago_orcamentario",
+            "type": "number",
+            "source": "Valor Pago Orçamentário"
+          },
+          {
+            "name": "vlr_pago_financeiro",
+            "type": "number",
+            "source": "Valor Pago Financeiro"
+          }
+        ]
+      }
+    },
+    {
+      "name": "restos_pagar",
+      "type": "table",
+      "profile": "tabular-data-resource",
+      "path": "data/restos_pagar.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:4e88bc547010b12824576e5bb5ab606106b34987f41e7db5df9a2d9dcd05e1a0",
+      "bytes": 10528303,
+      "fields": 41,
+      "rows": 308370,
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "integer",
+            "source": "Ano de Exercício"
+          },
+          {
+            "name": "ano_rp",
+            "type": "integer",
+            "source": "Ano Origem Restos a Pagar"
+          },
+          {
+            "name": "mes_cod",
+            "type": "integer",
+            "source": "Mês - Numérico"
+          },
+          {
+            "name": "uo_cod",
+            "type": "integer",
+            "source": "Unidade Orçamentária - Código"
+          },
+          {
+            "name": "ue_cod",
+            "type": "integer",
+            "source": "Unidade Executora - Código"
+          },
+          {
+            "name": "uo_fin_cod",
+            "type": "integer",
+            "source": "Unid Orçam Financiadora Gasto - Cod"
+          },
+          {
+            "name": "upg_cod",
+            "type": "integer",
+            "source": "Unid Programação Gasto - Código"
+          },
+          {
+            "name": "funcao_cod",
+            "type": "integer",
+            "source": "Função - Código"
+          },
+          {
+            "name": "acao_cod",
+            "type": "integer",
+            "source": "Projeto_Atividade - Código"
+          },
+          {
+            "name": "grupo_cod",
+            "type": "integer",
+            "source": "Grupo Despesa - Código"
+          },
+          {
+            "name": "modalidade_cod",
+            "type": "integer",
+            "source": "Modalidade Aplicação - Código"
+          },
+          {
+            "name": "iag_cod",
+            "type": "integer",
+            "source": "Identificador Orçamento - Código"
+          },
+          {
+            "name": "fonte_cod",
+            "type": "integer",
+            "source": "Fonte Recurso - Código"
+          },
+          {
+            "name": "ipu_cod",
+            "type": "integer",
+            "source": "Procedência - Código"
+          },
+          {
+            "name": "elemento_cod",
+            "type": "integer",
+            "source": "Elemento Despesa - Código"
+          },
+          {
+            "name": "item_cod",
+            "type": "integer",
+            "source": "Item Despesa - Código"
+          },
+          {
+            "name": "elemento_dea_cod",
+            "type": "integer",
+            "source": "Elemento origem DEA"
+          },
+          {
+            "name": "item_dea_cod",
+            "type": "integer",
+            "source": "Item origem DEA"
+          },
+          {
+            "name": "elemento_item_cod",
+            "type": "integer",
+            "source": "Elemento Item Despesa - Código"
+          },
+          {
+            "name": "num_empenho",
+            "type": "integer",
+            "source": "Número Empenho"
+          },
+          {
+            "name": "cnpj_cpf_formatado",
+            "type": "string",
+            "source": "CNPJ_CPF Credor - Formatado"
+          },
+          {
+            "name": "razao_social_credor",
+            "type": "string",
+            "source": "Razão Social Credor"
+          },
+          {
+            "name": "num_contrato_entrada",
+            "type": "integer",
+            "source": "ContratoConvênio Entrada"
+          },
+          {
+            "name": "num_contrato_saida",
+            "type": "integer",
+            "source": "ContratoConvênio Saída"
+          },
+          {
+            "name": "num_obra",
+            "type": "integer",
+            "source": "Número Obra"
+          },
+          {
+            "name": "num_processo_compra",
+            "type": "string",
+            "source": "Número Processo Compra SIAD"
+          },
+          {
+            "name": "vlr_inscrito_rpnp",
+            "type": "number",
+            "source": "Valor Inscrito Não Processado"
+          },
+          {
+            "name": "vlr_cancelado_rpnp",
+            "type": "number",
+            "source": "Valor Cancelado Não Processado"
+          },
+          {
+            "name": "vlr_restabelecido_rpnp",
+            "type": "number",
+            "source": "Valor Restabelecido Não Processado"
+          },
+          {
+            "name": "vlr_despesa_liquidada_rpnp",
+            "type": "number",
+            "source": "Valor Despesa Liquidada"
+          },
+          {
+            "name": "vlr_despesa_liquidada_pagar",
+            "type": "number",
+            "source": "Valor Despesa Liquidada a Pagar"
+          },
+          {
+            "name": "vlr_saldo_rpp",
+            "type": "number",
+            "source": "Saldo Restos a Pagar Processado"
+          },
+          {
+            "name": "vlr_saldo_rpnp",
+            "type": "number",
+            "source": "Saldo Restos a Pagar Não Processado"
+          },
+          {
+            "name": "vlr_inscrito_rpp",
+            "type": "number",
+            "source": "Valor Inscrito Processado"
+          },
+          {
+            "name": "vlr_cancelado_rpp",
+            "type": "number",
+            "source": "Valor Cancelado Processado"
+          },
+          {
+            "name": "vlr_desconto_rpp",
+            "type": "number",
+            "source": "Valor Desconto Processado"
+          },
+          {
+            "name": "vlr_restabelecido_rpp",
+            "type": "number",
+            "source": "Valor Restabelecido Processado"
+          },
+          {
+            "name": "vlr_pago_rpp",
+            "type": "number",
+            "source": "Valor Pago Processado"
+          },
+          {
+            "name": "vlr_anulacao_pagamento_rpp",
+            "type": "number",
+            "source": "Valor Anulação Pagamento Processado"
+          },
+          {
+            "name": "vlr_retencao_rpp",
+            "type": "number",
+            "source": "Valor Retenção Processado"
+          },
+          {
+            "name": "vlr_anulacao_retencao_rpp",
+            "type": "number",
+            "source": "Valor Anulação Retenção Processado"
+          }
+        ]
+      }
+    }
+  ],
+  "updated_at": "2024-02-23T14:42:11"
+}
