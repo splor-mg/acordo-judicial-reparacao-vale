@@ -4,7 +4,6 @@ library(data.table)
 library(dplyr)
 library(writexl)
 library(relatorios)
-library(data.table)
 
 siafi <- read_datapackage("datapackages/siafi/datapackage.json")
 vale <- read_datapackage("datapackages/acordo_vale_brumadinho/datapackage.json")
