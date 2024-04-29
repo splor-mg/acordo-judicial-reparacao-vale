@@ -5,3 +5,4 @@
 venv/
 datapackages/**/*.*
 !datapackages/**/datapackage.json
+.env

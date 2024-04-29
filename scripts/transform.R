@@ -36,12 +36,33 @@ execucao <- join(exec_rp, exec_desp,
                                "vlr_pago_rpp"),
                  regex = FALSE)
 
+execucao <- execucao[
+  ,
+  .(vlr_empenhado = sum(vlr_empenhado),
+    vlr_cancelado_rpnp = sum(vlr_cancelado_rpnp),
+    vlr_cancelado_rpp = sum(vlr_cancelado_rpp),
+    vlr_liquidado = sum(vlr_liquidado),
+    vlr_liquidado_rpnp = sum(vlr_despesa_liquidada_rpnp),
+    vlr_pago_orcamentario = sum(vlr_pago_orcamentario),
+    vlr_pago_rpnp = sum(vlr_pago_rpnp),
+    vlr_pago_rpp = sum(vlr_pago_rpp)
+  ),
+  .(uo_cod,
+    num_contrato_saida,
+    num_contrato_entrada)
+]
+
+toolkit::filter_duplicated_rows(execucao, c("uo_cod", "num_contrato_saida", "num_contrato_entrada")) |> arrange(uo_cod, num_contrato_saida, num_contrato_entrada) |> View()
+
+
 valores_contratos <- siad$compras[
   ,
   .(vlr_total_atualizado = sum(vlr_total_atualizado)),
   .(uo_cod, 
     num_contrato_saida)
 ]
+
+nrows_execucao <- nrow(execucao)
 
 dt <- left_join(execucao, 
                 valores_contratos, 
@@ -60,35 +81,36 @@ info_contratos <- siad$compras[
 
 dt <- left_join(dt, info_contratos, c("uo_cod", "num_contrato_saida"))
 
-output <- dt[
-  ,
-  .(vlr_total_atualizado_contrato = sum(vlr_total_atualizado),
-    vlr_empenhado = sum(vlr_empenhado),
-    vlr_cancelado_rpnp = sum(vlr_cancelado_rpnp),
-    vlr_cancelado_rpp = sum(vlr_cancelado_rpp),
-    vlr_liquidado = sum(vlr_liquidado),
-    vlr_liquidado_rpnp = sum(vlr_despesa_liquidada_rpnp),
-    vlr_pago_orcamentario = sum(vlr_pago_orcamentario),
-    vlr_pago_rpnp = sum(vlr_pago_rpnp),
-    vlr_pago_rpp = sum(vlr_pago_rpp)
-    ),
-  .(uo_cod,
-    num_contrato_entrada, 
-    projeto, 
-    num_processo_compra, 
-    num_contrato_saida, 
-    objeto_contrato_saida, 
-    data_inicio_vigencia_contrato_saida, 
-    data_termino_vigencia_contrato_saida)
-]
+dt[, data_inicio_vigencia_contrato_saida := as.Date(data_inicio_vigencia_contrato_saida)]
+dt[, data_termino_vigencia_contrato_saida := as.Date(data_termino_vigencia_contrato_saida)]
 
-output[, data_inicio_vigencia_contrato_saida := as.Date(data_inicio_vigencia_contrato_saida)]
-output[, data_termino_vigencia_contrato_saida := as.Date(data_termino_vigencia_contrato_saida)]
+col_order <- c("uo_cod",
+               "num_contrato_entrada",
+               "projeto",
+               "num_processo_compra",
+               "num_contrato_saida",
+               "objeto_contrato_saida",
+               "data_inicio_vigencia_contrato_saida",
+               "data_termino_vigencia_contrato_saida",
+               "vlr_total_atualizado",
+               "vlr_empenhado",
+               "vlr_cancelado_rpnp",
+               "vlr_cancelado_rpp",
+               "vlr_liquidado",
+               "vlr_liquidado_rpnp",
+               "vlr_pago_orcamentario",
+               "vlr_pago_rpnp",
+               "vlr_pago_rpp")
 
-names(output) <- toupper(names(output))
-output$ANO <- 2024
-output <- adiciona_desc(output)
-output$ANO <- NULL
+setcolorder(dt, col_order)
+setnames(dt, "vlr_total_atualizado", "vlr_total_atualizado_contrato")
 
-fwrite(output, "data/acordo-judicial-reparacao-vale.csv", bom = TRUE, dec = ",", sep = ";")
+names(dt) <- toupper(names(dt))
+dt$ANO <- 2024
+dt <- adiciona_desc(dt)
+dt$ANO <- NULL
+dt$ANEXO <- NULL
+dt$VALOR_PROJETO <- NULL
+
+fwrite(dt, "data/acordo-judicial-reparacao-vale.csv", bom = TRUE, dec = ",", sep = ";")
 
