@@ -1,13 +1,11 @@
-library(toolkit)
-library(spreadmart)
 library(data.table)
 library(dplyr)
 library(writexl)
 library(relatorios)
 
-siafi <- read_datapackage("datapackages/siafi/datapackage.json")
-vale <- read_datapackage("datapackages/acordo_vale_brumadinho/datapackage.json")
-siad <- read_datapackage("datapackages/siad/datapackage.json")
+siafi <- spreadmart::read_datapackage("datapackages/siafi/datapackage.json")
+vale <- spreadmart::read_datapackage("datapackages/acordo_vale_brumadinho/datapackage.json")
+siad <- spreadmart::read_datapackage("datapackages/siad/datapackage.json")
 
 projetos <- vale$projetos_vale[!duplicated(num_contrato_entrada)]
 
@@ -24,17 +22,17 @@ exec_desp <- siafi$execucao[
   ano %in% 2021:2024 & num_contrato_entrada %in% projetos$num_contrato_entrada
 ]
 
-execucao <- join(exec_rp, exec_desp, 
-                 by = c("ano", "uo_cod", "num_contrato_entrada", "num_contrato_saida"),
-                 value.var = c("vlr_empenhado",
-                               "vlr_cancelado_rpnp",
-                               "vlr_cancelado_rpp",
-                               "vlr_liquidado", 
-                               "vlr_despesa_liquidada_rpnp",
-                               "vlr_pago_orcamentario",
-                               "vlr_pago_rpnp",
-                               "vlr_pago_rpp"),
-                 regex = FALSE)
+execucao <- rbind(exec_desp, exec_rp, fill = TRUE)
+cols = c(
+  "vlr_empenhado",
+  "vlr_cancelado_rpnp",
+  "vlr_cancelado_rpp",
+  "vlr_liquidado",
+  "vlr_despesa_liquidada_rpnp",
+  "vlr_pago_orcamentario",
+  "vlr_pago_rpnp",
+  "vlr_pago_rpp")
+setnafill(execucao, type = "const", fill = 0, cols = cols)
 
 execucao <- execucao[
   ,
@@ -51,9 +49,6 @@ execucao <- execucao[
     num_contrato_saida,
     num_contrato_entrada)
 ]
-
-toolkit::filter_duplicated_rows(execucao, c("uo_cod", "num_contrato_saida", "num_contrato_entrada")) |> arrange(uo_cod, num_contrato_saida, num_contrato_entrada) |> View()
-
 
 valores_contratos <- siad$compras[
   ,
