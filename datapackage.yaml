@@ -1,14 +1,12 @@
 resources:
-  - name: sheet1
+  - name: vale
     type: table
-    path: data/acordo-judicial-reparacao-vale.xlsx
-    scheme: file
-    format: xlsx
-    mediatype: application/vnd.ms-excel
+    path: data/acordo-judicial-reparacao-vale.csv
+    format: csv
     encoding: utf-8
     dialect:
-      excel:
-        sheet: Sheet1
+      csv:
+        delimiter: ";"
     schema:
       fields:
         - name: UO_COD
@@ -31,19 +29,28 @@ resources:
           type: date
         - name: VLR_TOTAL_ATUALIZADO_CONTRATO
           type: number
+          decimalChar: ","
         - name: VLR_EMPENHADO
           type: number
+          decimalChar: ","
         - name: VLR_CANCELADO_RPNP
           type: number
+          decimalChar: ","
         - name: VLR_CANCELADO_RPP
           type: number
+          decimalChar: ","
         - name: VLR_LIQUIDADO
           type: number
+          decimalChar: ","
         - name: VLR_LIQUIDADO_RPNP
           type: number
+          decimalChar: ","
         - name: VLR_PAGO_ORCAMENTARIO
           type: number
+          decimalChar: ","
         - name: VLR_PAGO_RPNP
           type: number
+          decimalChar: ","
         - name: VLR_PAGO_RPP
           type: number
+          decimalChar: ","

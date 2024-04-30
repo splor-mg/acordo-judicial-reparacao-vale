@@ -99,6 +99,7 @@ col_order <- c("uo_cod",
 
 setcolorder(dt, col_order)
 setnames(dt, "vlr_total_atualizado", "vlr_total_atualizado_contrato")
+setorderv(dt, c("uo_cod", "num_contrato_entrada", "num_processo_compra", "num_contrato_saida"))
 
 names(dt) <- toupper(names(dt))
 dt$ANO <- 2024
