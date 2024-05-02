@@ -21,3 +21,4 @@ transform:
 	
 check: 
 	frictionless validate datapackage.yaml
+	Rscript checks/rstats/testthat.R
