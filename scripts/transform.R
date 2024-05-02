@@ -15,8 +15,7 @@ exec_rp <- siafi$restos_pagar[
 
 exec_rp[, vlr_pago_rpnp := vlr_saldo_rpp + vlr_despesa_liquidada_rpnp - vlr_despesa_liquidada_pagar]
 exec_rp[, vlr_pago_rp := vlr_pago_rpp + vlr_pago_rpnp]
-exec_rp[, vlr_cancelado_rpnp := vlr_cancelado_rpnp - vlr_restabelecido_rpnp]
-exec_rp[, vlr_cancelado_rpp := vlr_cancelado_rpp + vlr_desconto_rpp - vlr_restabelecido_rpp]
+exec_rp[, vlr_cancelado_rpp := vlr_cancelado_rpp + vlr_desconto_rpp]
 
 exec_desp <- siafi$execucao[
   ano %in% 2021:2024 & num_contrato_entrada %in% projetos$num_contrato_entrada
@@ -26,7 +25,9 @@ execucao <- rbind(exec_desp, exec_rp, fill = TRUE)
 cols = c(
   "vlr_empenhado",
   "vlr_cancelado_rpnp",
+  "vlr_restabelecido_rpnp",
   "vlr_cancelado_rpp",
+  "vlr_restabelecido_rpp",
   "vlr_liquidado",
   "vlr_despesa_liquidada_rpnp",
   "vlr_pago_orcamentario",
@@ -38,7 +39,9 @@ execucao <- execucao[
   ,
   .(vlr_empenhado = sum(vlr_empenhado),
     vlr_cancelado_rpnp = sum(vlr_cancelado_rpnp),
+    vlr_restabelecido_rpnp = sum(vlr_restabelecido_rpnp),
     vlr_cancelado_rpp = sum(vlr_cancelado_rpp),
+    vlr_restabelecido_rpp = sum(vlr_restabelecido_rpp),
     vlr_liquidado = sum(vlr_liquidado),
     vlr_liquidado_rpnp = sum(vlr_despesa_liquidada_rpnp),
     vlr_pago_orcamentario = sum(vlr_pago_orcamentario),
@@ -90,7 +93,9 @@ col_order <- c("uo_cod",
                "vlr_total_atualizado",
                "vlr_empenhado",
                "vlr_cancelado_rpnp",
+               "vlr_restabelecido_rpnp",
                "vlr_cancelado_rpp",
+               "vlr_restabelecido_rpp",
                "vlr_liquidado",
                "vlr_liquidado_rpnp",
                "vlr_pago_orcamentario",

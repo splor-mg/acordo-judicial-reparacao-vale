@@ -36,7 +36,13 @@ resources:
         - name: VLR_CANCELADO_RPNP
           type: number
           decimalChar: ","
+        - name: VLR_RESTABELECIDO_RPNP
+          type: number
+          decimalChar: ","
         - name: VLR_CANCELADO_RPP
+          type: number
+          decimalChar: ","
+        - name: VLR_RESTABELECIDO_RPP
           type: number
           decimalChar: ","
         - name: VLR_LIQUIDADO
