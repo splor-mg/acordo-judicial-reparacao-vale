@@ -12,10 +12,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:8023d105d7fb956f98bf13b0f748eae75fd7ba30e7a8cd8a3d647834d08bde11",
-      "bytes": 30702990,
+      "hash": "sha256:47489052ba28914b8b4183a0f6ef990467ccb57d7e0052920d0f58ee2666cc5e",
+      "bytes": 30440158,
       "fields": 19,
-      "rows": 494357,
+      "rows": 498993,
       "schema": {
         "fields": [
           {
@@ -117,5 +117,5 @@
       }
     }
   ],
-  "updated_at": "2024-02-23T16:00:36"
+  "updated_at": "2024-05-02T08:45:10"
 }
