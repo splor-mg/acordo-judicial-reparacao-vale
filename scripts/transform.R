@@ -84,7 +84,7 @@ dt[, data_termino_vigencia_contrato_saida := as.Date(data_termino_vigencia_contr
 
 col_order <- c("uo_cod",
                "num_contrato_entrada",
-               "projeto",
+               "iniciativa",
                "num_processo_compra",
                "num_contrato_saida",
                "objeto_contrato_saida",
@@ -111,7 +111,7 @@ dt$ANO <- 2024
 dt <- adiciona_desc(dt)
 dt$ANO <- NULL
 dt$ANEXO <- NULL
-dt$VALOR_PROJETO <- NULL
+dt$VALOR_INICIATIVA <- NULL
 
 fwrite(dt, "data/acordo-judicial-reparacao-vale.csv", bom = TRUE, dec = ",", sep = ";")
 
