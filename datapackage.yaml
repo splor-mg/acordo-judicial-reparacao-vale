@@ -15,7 +15,7 @@ resources:
           type: string
         - name: NUM_CONTRATO_ENTRADA
           type: integer
-        - name: PROJETO
+        - name: INICIATIVA
           type: string
         - name: NUM_PROCESSO_COMPRA
           type: string
