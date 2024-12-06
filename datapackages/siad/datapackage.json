@@ -12,10 +12,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:d9f75c37e430f8b54ea7212192e22f026451e16075d15290914dcf018e322cc6",
-      "bytes": 31625664,
+      "hash": "sha256:969e26c876b75437ca1256e5f0b18b14a8d490a58a04f8a27aedd8a140f4d42f",
+      "bytes": 31577251,
       "fields": 19,
-      "rows": 508053,
+      "rows": 516163,
       "schema": {
         "fields": [
           {
@@ -117,12 +117,12 @@
       }
     }
   ],
-  "updated_at": "2024-09-05T07:08:38",
+  "updated_at": "2024-12-06T10:03:35",
   "remote": {
     "host": "raw.githubusercontent.com",
     "user": "splor-mg",
     "repo": "armazem-siad-dados",
-    "ref": "2575a39c02c37b67f7238251ea705f649322404f",
-    "sha": "2575a39c02c37b67f7238251ea705f649322404f"
+    "ref": "main",
+    "sha": "11007ddae753b85e67f18ea2b306bcef46b7d6b3"
   }
 }
