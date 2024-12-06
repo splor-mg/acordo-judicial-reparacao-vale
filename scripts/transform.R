@@ -3,9 +3,9 @@ library(dplyr)
 library(writexl)
 library(relatorios)
 
-siafi <- spreadmart::read_datapackage("datapackages/siafi/datapackage.json")
-vale <- spreadmart::read_datapackage("datapackages/acordo_vale_brumadinho/datapackage.json")
-siad <- spreadmart::read_datapackage("datapackages/siad/datapackage.json")
+siafi <- dpm::read_datapackage("datapackages/siafi/datapackage.json")
+vale <- dpm::read_datapackage("datapackages/acordo_vale_brumadinho/datapackage.json")
+siad <- dpm::read_datapackage("datapackages/siad/datapackage.json")
 
 projetos <- vale$projetos_vale[!duplicated(num_contrato_entrada)]
 
