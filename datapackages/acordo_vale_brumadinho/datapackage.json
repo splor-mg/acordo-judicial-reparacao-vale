@@ -1,5 +1,4 @@
 {
-  "profile": "tabular-data-package",
   "resources": [
     {
       "name": "projetos_vale",
@@ -24,7 +23,7 @@
           },
           {
             "name": "valor_iniciativa",
-            "type": "number"
+            "type": "string"
           }
         ]
       }

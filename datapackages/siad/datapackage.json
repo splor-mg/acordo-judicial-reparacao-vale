@@ -117,12 +117,5 @@
       }
     }
   ],
-  "updated_at": "2024-12-06T10:03:35",
-  "remote": {
-    "host": "raw.githubusercontent.com",
-    "user": "splor-mg",
-    "repo": "armazem-siad-dados",
-    "ref": "main",
-    "sha": "11007ddae753b85e67f18ea2b306bcef46b7d6b3"
-  }
+  "updated_at": "2024-12-06T10:03:35"
 }

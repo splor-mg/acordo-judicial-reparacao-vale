@@ -391,12 +391,5 @@
       }
     }
   ],
-  "updated_at": "2024-12-02T10:15:38",
-  "remote": {
-    "host": "raw.githubusercontent.com",
-    "user": "splor-mg",
-    "repo": "armazem-siafi-dados-2024",
-    "ref": "d0baf086e14b3c7ebe893912088b683e29210906",
-    "sha": "d0baf086e14b3c7ebe893912088b683e29210906"
-  }
+  "updated_at": "2024-12-02T10:15:38"
 }
