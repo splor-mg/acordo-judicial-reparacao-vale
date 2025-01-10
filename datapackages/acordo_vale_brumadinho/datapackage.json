@@ -23,7 +23,7 @@
           },
           {
             "name": "valor_iniciativa",
-            "type": "string"
+            "type": "number"
           }
         ]
       }
