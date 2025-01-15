@@ -7,7 +7,7 @@ token = "GITHUB_PAT"
 
 [packages.siafi_2024]
 
-path = "https://raw.githubusercontent.com/splor-mg/armazem-siafi-dados-2024/1d30de38d5400fa2dd2179562626fde353c50c34/datapackage.json"
+path = "https://raw.githubusercontent.com/splor-mg/armazem-siafi-dados-2024/566292a34c93219896cb3302a567c202a212e953/datapackage.json"
 resources = ["execucao", "restos_pagar"]
 token = "GITHUB_PAT"
 
