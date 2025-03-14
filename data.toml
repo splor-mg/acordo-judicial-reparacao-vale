@@ -5,6 +5,12 @@
 path = "https://raw.githubusercontent.com/splor-mg/armazem-siad-dados/a341d69ff547534933efbaafdd5816b83d19bfd7/datapackage.json"
 token = "GITHUB_PAT"
 
+[packages.siafi_2025]
+
+path = "https://raw.githubusercontent.com/splor-mg/armazem-siafi-dados-2025/adf8eeeec76eaa3d8b8d960911d05b52aa07b8e8/datapackage.json"
+resources = ["execucao", "restos_pagar"]
+token = "GITHUB_PAT"
+
 [packages.siafi_2024]
 
 path = "https://raw.githubusercontent.com/splor-mg/armazem-siafi-dados-2024/6090285b16f23de5e37e3b7016c6e2f008f07a12/datapackage.json"
