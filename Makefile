@@ -1,6 +1,6 @@
 .PHONY: all extract transform publish
 
-include .env
+#include .env
 
 all: extract transform publish
 
@@ -11,14 +11,15 @@ extract:
 			   --package datapackages/siafi_2022/datapackage.json \
 	           --package datapackages/siafi_2023/datapackage.json \
 	           --package datapackages/siafi_2024/datapackage.json \
+						 --package datapackages/siafi_2025/datapackage.json \
 			   --output-dir datapackages/siafi/data
 	cd datapackages/siafi && frictionless describe --stats data/*.csv --type package --json > datapackage.json
 	jq '. + {"name": "siafi"}' datapackages/siafi/datapackage.json > datapackage.json.tmp && mv datapackage.json.tmp datapackages/siafi/datapackage.json
 	jq '.resources |= map(. + {"profile": "tabular-data-resource"})' datapackages/siafi/datapackage.json > datapackage.json.tmp && mv datapackage.json.tmp datapackages/siafi/datapackage.json
 
-transform: 
+transform:
 	Rscript scripts/transform.R
-	
-check: 
+
+check:
 	frictionless validate datapackage.yaml
 	Rscript checks/rstats/testthat.R

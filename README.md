@@ -24,5 +24,6 @@ Rscript -e 'renv::install()'
 
 Atualize manualmente o conjunto [armazem-siad-dados](https://github.com/splor-mg/armazem-siad-dados).
 
+Atualize as hashs dos commits dos arquivos em `data.toml`
 
 Execute o comando `make all`

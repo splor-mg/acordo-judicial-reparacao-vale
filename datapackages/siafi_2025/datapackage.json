@@ -1,5 +1,5 @@
 {
-  "name": "armazem-siafi-dados",
+  "name": "dados-armazem-siafi",
   "profile": "tabular-data-package",
   "resources": [
     {
@@ -12,10 +12,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:bc11d1810c67cca15837a87a18807a94321174fe198c25e692e47485cfd8d90a",
-      "bytes": 26719793,
-      "fields": 29,
-      "rows": 1011195,
+      "hash": "sha256:14652913ca514f14e5cb510a6dc13719f591931bab84bca604ec01bf290417a5",
+      "bytes": 2570606,
+      "fields": 30,
+      "rows": 100606,
       "schema": {
         "fields": [
           {
@@ -52,6 +52,11 @@
             "name": "funcao_cod",
             "type": "integer",
             "source": "Função - Código"
+          },
+          {
+            "name": "subfuncao_cod",
+            "type": "integer",
+            "source": "Subfunção - Código"
           },
           {
             "name": "programa_cod",
@@ -176,10 +181,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:d077d0e253b3c71ba840d673706665a9babdc488b7c573647199ec08a66b3119",
-      "bytes": 11163902,
-      "fields": 41,
-      "rows": 329154,
+      "hash": "sha256:4a311b6fe036b3cd80143be78eecb0f40198d222e70dcbdb4c45ba65de2602be",
+      "bytes": 6431918,
+      "fields": 45,
+      "rows": 181006,
       "schema": {
         "fields": [
           {
@@ -386,17 +391,37 @@
             "name": "vlr_anulacao_retencao_rpp",
             "type": "number",
             "source": "Valor Anulação Retenção Processado"
+          },
+          {
+            "name": "vlr_anulacao_pago_antecipado",
+            "type": "number",
+            "source": "Valor Anulação Pago Antecipado"
+          },
+          {
+            "name": "vlr_pago_antecipado_exercicio",
+            "type": "number",
+            "source": "Valor Pago Antecipado Exercício"
+          },
+          {
+            "name": "vlr_pago_rpnp",
+            "type": "number",
+            "source": "Valor Pago Não Processado"
+          },
+          {
+            "name": "vlr_retencao_rpnp",
+            "type": "number",
+            "source": "Valor Retenção Não Processado"
           }
         ]
       }
     }
   ],
-  "updated_at": "2024-02-23T13:04:44",
+  "updated_at": "2025-03-03T10:17:16",
   "remote": {
     "host": "raw.githubusercontent.com",
     "user": "splor-mg",
-    "repo": "armazem-siafi-dados-2021",
-    "ref": "8b6dbfa40f8f38b0844c51155f6601522cc577e5",
-    "sha": "8b6dbfa40f8f38b0844c51155f6601522cc577e5"
+    "repo": "dados-armazem-siafi-2025",
+    "ref": "adf8eeeec76eaa3d8b8d960911d05b52aa07b8e8",
+    "sha": "adf8eeeec76eaa3d8b8d960911d05b52aa07b8e8"
   }
 }

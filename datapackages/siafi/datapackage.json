@@ -8,10 +8,10 @@
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
-      "hash": "sha256:a88f2c77a2a2aaa04059b28718bf0fa9d7fb8a3386bcfc358ec2860e0dd0c8c2",
-      "bytes": 698090893,
-      "fields": 29,
-      "rows": 4568280,
+      "hash": "sha256:1911d314d0ec6ada89dd69e0aa3969a684659a1dc01d5b90b6711d6a901a3805",
+      "bytes": 713935464,
+      "fields": 30,
+      "rows": 4668886,
       "schema": {
         "fields": [
           {
@@ -129,6 +129,10 @@
           {
             "name": "vlr_pago_financeiro",
             "type": "number"
+          },
+          {
+            "name": "subfuncao_cod",
+            "type": "any"
           }
         ]
       },
@@ -142,10 +146,10 @@
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
-      "hash": "sha256:98eb8e337497b76d9bab0cf2e13e44e9084d8c61aecf2c8b66c60032e9565ed5",
-      "bytes": 270936365,
-      "fields": 41,
-      "rows": 1217972,
+      "hash": "sha256:f1a43bc99498113693958b2affcf6793f73d9cea48fac890f82b6129768379ca",
+      "bytes": 317680615,
+      "fields": 45,
+      "rows": 1398978,
       "schema": {
         "fields": [
           {
@@ -311,6 +315,22 @@
           {
             "name": "vlr_anulacao_retencao_rpp",
             "type": "number"
+          },
+          {
+            "name": "vlr_anulacao_pago_antecipado",
+            "type": "any"
+          },
+          {
+            "name": "vlr_pago_antecipado_exercicio",
+            "type": "any"
+          },
+          {
+            "name": "vlr_pago_rpnp",
+            "type": "any"
+          },
+          {
+            "name": "vlr_retencao_rpnp",
+            "type": "any"
           }
         ]
       },
