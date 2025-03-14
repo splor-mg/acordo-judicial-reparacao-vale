@@ -3,19 +3,21 @@ Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.0.0-9000
 Encoding: UTF-8
-Imports: 
+Imports:
   checksplanejamento,
-  relatorios,
   data.table,
+  dpm,
   logger,
   writexl,
   dplyr,
   daff,
   toolkit,
+  relatorios,
   spreadmart,
   testthat (>= 3.0.0)
 Remotes:
     github::splor-mg/checks-planejamento,
     github::fjuniorr/toolkit-r,
     github::splor-mg/spreadmart,
+    github::splor-mg/dpm-r,
     bitbucket::dcgf/relatorios
