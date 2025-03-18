@@ -2,6 +2,7 @@ library(validate)
 library(dplyr)
 library(toolkit)
 library(spreadmart)
+library(dpm)
 library(data.table)
 library(here)
 
@@ -43,8 +44,8 @@ exec_rp[, vlr_inscrito_rpp := vlr_inscrito_rpp_outros + vlr_inscrito_rpp_folha]
 exec_rp[, vlr_pago_rpp := vlr_pago_rpp_outros + vlr_pago_rpp_folha]
 exec_rp[, vlr_cancelado_rpp := vlr_cancelado_rpp_outros + vlr_cancelado_rpp_folha]
 
-exec_rp <- exec_rp[ano %in% 2021:2023, .(vlr_inscrito_rpp, 
-            vlr_pago_rpp, 
+exec_rp <- exec_rp[ano %in% 2021:2023, .(vlr_inscrito_rpp,
+            vlr_pago_rpp,
             vlr_cancelado_rpp,
             vlr_inscrito_rpnp,
             vlr_despesa_liquidada_rpnp,
