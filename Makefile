@@ -2,7 +2,7 @@
 
 #include .env
 
-all: extract transform publish
+all: extract transform check
 
 extract:
 	dpm install
