@@ -23,3 +23,8 @@ transform:
 check:
 	frictionless validate datapackage.yaml
 	Rscript checks/rstats/testthat.R
+
+publish:
+	git add -Af datapackage.json datapackages/* data/* 
+	git commit --author="Automated <actions@users.noreply.github.com>" -m "Update data package at: $$(date +%Y-%m-%dT%H:%M:%SZ)" || exit 0
+	git push
