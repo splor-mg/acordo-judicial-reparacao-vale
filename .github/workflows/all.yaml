@@ -17,12 +17,16 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    - name: Write Bitbucket password secret to file
+      run: echo "${{ secrets.BITBUCKET_PASSWORD }}" > bitbucket_password.txt
+
+    - name: Write GitHub PAT secret to file
+      run: echo "${{ secrets.GH_PAT }}" > gh_pat.txt
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       env:
         DOCKER_BUILDKIT: 1
-        BITBUCKET_PASSWORD: ${{ secrets.BITBUCKET_PASSWORD }}
-        GH_PAT: ${{ secrets.GH_PAT }}
       with:
         context: .
         push: true
@@ -32,5 +36,5 @@ jobs:
         build-args: |
           BITBUCKET_USER=${{ secrets.BITBUCKET_USER }}
         secrets: |
-          id=bitbucket_password,env=BITBUCKET_PASSWORD
-          id=gh_pat,env=GH_PAT
+          id=bitbucket_password,src=bitbucket_password.txt
+          id=gh_pat,src=gh_pat.txt
