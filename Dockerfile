@@ -19,12 +19,12 @@ RUN python3 -m pip install --upgrade pip setuptools wheel
 RUN python3 -m pip install -r requirements.txt
 
 ARG BITBUCKET_USER
-ARG BITBUCKET_PASSWORD
-ARG GH_PAT
 
-RUN echo "BITBUCKET_USER=$BITBUCKET_USER" > .Renviron &&\
-    echo "BITBUCKET_PASSWORD=$BITBUCKET_PASSWORD" >> .Renviron &&\
-    echo "GITHUB_PAT=$GH_PAT" >> .Renviron
+RUN --mount=type=secret,id=bitbucket_password \
+    --mount=type=secret,id=gh_pat \
+    sh -c 'echo "BITBUCKET_USER=$BITBUCKET_USER" > .Renviron && \
+           echo "BITBUCKET_PASSWORD=$(cat /run/secrets/bitbucket_password)" >> .Renviron && \
+           echo "GITHUB_PAT=$(cat /run/secrets/gh_pat)" >> .Renviron'
 
 RUN Rscript -e "install.packages('renv')"
 RUN Rscript -e "renv::install()"

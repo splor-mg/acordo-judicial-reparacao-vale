@@ -33,8 +33,12 @@ jobs:
         cache-to: type=inline
         build-args: |
           BITBUCKET_USER=${{ secrets.BITBUCKET_USER }}
-          BITBUCKET_PASSWORD=${{ secrets.BITBUCKET_PASSWORD }}
-          GH_PAT=${{ secrets.GH_PAT }}
+        secrets: |
+          id=bitbucket_password,env=BITBUCKET_PASSWORD
+          id=gh_pat,env=GH_PAT
+      env:
+        BITBUCKET_PASSWORD: ${{ secrets.BITBUCKET_PASSWORD }}
+        GH_PAT: ${{ secrets.GH_PAT }}
 
     # - name: ETL pipeline
     #   env:
