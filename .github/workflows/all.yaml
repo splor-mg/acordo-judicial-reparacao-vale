@@ -26,8 +26,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       env:
-        BITBUCKET_PASSWORD: ${{ secrets.BITBUCKET_PASSWORD }}
-        GH_PAT: ${{ secrets.GH_PAT }}
+        BITBUCKET_PASSWORD:
+        GH_PAT:
       with:
         context: .
         push: true
@@ -37,18 +37,5 @@ jobs:
         build-args: |
           BITBUCKET_USER=${{ secrets.BITBUCKET_USER }}
         secrets: |
-          id=bitbucket_password,env=BITBUCKET_PASSWORD
-          id=gh_pat,env=GH_PAT
-
-
-    # - name: ETL pipeline
-    #   env:
-    #     GH_PAT: ${{ secrets.GH_PAT }}
-    #     BITBUCKET_USER: ${{ secrets.BITBUCKET_USER }}
-    #     BITBUCKET_PASSWORD: ${{ secrets.BITBUCKET_PASSWORD }}
-    #   run: docker run  --rm --mount type=bind,source=${PWD},target=/project splormg/${{ github.event.repository.name }} make all
-    # - name: Publish data package
-    #   run: |-
-    #     git config user.name "Automated"
-    #     git config user.email "actions@users.noreply.github.com"
-    #     make publish
+          id=bitbucket_password,env=${{ secrets.BITBUCKET_PASSWORD }}
+          id=gh_pat,env=${{ secrets.GH_PAT }}
