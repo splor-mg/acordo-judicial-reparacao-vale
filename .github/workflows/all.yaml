@@ -38,3 +38,6 @@ jobs:
         secrets: |
           id=bitbucket_password,src=bitbucket_password.txt
           id=gh_pat,src=gh_pat.txt
+
+    - name: Remove temporary secret files
+      run: rm bitbucket_password.txt gh_pat.txt
