@@ -26,8 +26,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       env:
-        BITBUCKET_PASSWORD:
-        GH_PAT:
+        BITBUCKET_PASSWORD: ${{ secrets.BITBUCKET_PASSWORD }}
+        GH_PAT: ${{ secrets.GH_PAT }}
       with:
         context: .
         push: true
@@ -37,5 +37,5 @@ jobs:
         build-args: |
           BITBUCKET_USER=${{ secrets.BITBUCKET_USER }}
         secrets: |
-          id=bitbucket_password,env=${{ secrets.BITBUCKET_PASSWORD }}
-          id=gh_pat,env=${{ secrets.GH_PAT }}
+          id=bitbucket_password,env=BITBUCKET_PASSWORD
+          id=gh_pat,env=GH_PAT
