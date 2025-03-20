@@ -31,7 +31,10 @@ jobs:
         tags: splormg/${{ github.event.repository.name }}:latest
         cache-from: type=registry,ref=splormg/${{ github.event.repository.name }}:latest
         cache-to: type=inline
-        secrets: id=secret,src=.env
+        build-args: |
+          BITBUCKET_USER=${{ secrets.BITBUCKET_USER }}
+          BITBUCKET_PASSWORD=${{ secrets.BITBUCKET_PASSWORD }}
+          GH_PAT=${{ secrets.GH_PAT }}
 
     # - name: ETL pipeline
     #   env:
