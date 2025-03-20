@@ -25,6 +25,9 @@ jobs:
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
+      env:
+        BITBUCKET_PASSWORD: ${{ secrets.BITBUCKET_PASSWORD }}
+        GH_PAT: ${{ secrets.GH_PAT }}
       with:
         context: .
         push: true
@@ -36,9 +39,7 @@ jobs:
         secrets: |
           id=bitbucket_password,env=BITBUCKET_PASSWORD
           id=gh_pat,env=GH_PAT
-      env:
-        BITBUCKET_PASSWORD: ${{ secrets.BITBUCKET_PASSWORD }}
-        GH_PAT: ${{ secrets.GH_PAT }}
+
 
     # - name: ETL pipeline
     #   env:
