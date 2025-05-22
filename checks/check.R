@@ -4,6 +4,7 @@ library(toolkit)
 library(spreadmart)
 library(data.table)
 library(here)
+library(dpm)
 
 siafi <- read_datapackage("datapackages/siafi/datapackage.json")
 folha <- read_datapackage("https://raw.githubusercontent.com/splor-mg/armazem-siafi-restos-pagar-folha-dados/main/datapackage.json")
@@ -43,7 +44,7 @@ exec_rp[, vlr_inscrito_rpp := vlr_inscrito_rpp_outros + vlr_inscrito_rpp_folha]
 exec_rp[, vlr_pago_rpp := vlr_pago_rpp_outros + vlr_pago_rpp_folha]
 exec_rp[, vlr_cancelado_rpp := vlr_cancelado_rpp_outros + vlr_cancelado_rpp_folha]
 
-exec_rp <- exec_rp[ano %in% 2021:2023, .(vlr_inscrito_rpp, 
+exec_rp <- exec_rp[ano %in% 2021:2025, .(vlr_inscrito_rpp, 
             vlr_pago_rpp, 
             vlr_cancelado_rpp,
             vlr_inscrito_rpnp,

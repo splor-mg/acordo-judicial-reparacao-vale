@@ -1,5 +1,6 @@
 library(checksplanejamento)
 library(data.table)
+library(dpm)
 
 siafi <- read_datapackage(here::here("datapackages/siafi/datapackage.json"))
 vale <- read_datapackage(here::here("datapackages/acordo_vale_brumadinho/datapackage.json"))
