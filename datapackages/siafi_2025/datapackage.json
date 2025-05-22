@@ -12,10 +12,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:14652913ca514f14e5cb510a6dc13719f591931bab84bca604ec01bf290417a5",
-      "bytes": 2570606,
+      "hash": "sha256:1298e974347acb5e05551f7a78d57d95d5a5e4951ee311a27acb788a1ab51bc6",
+      "bytes": 7077253,
       "fields": 30,
-      "rows": 100606,
+      "rows": 275556,
       "schema": {
         "fields": [
           {
@@ -181,10 +181,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:4a311b6fe036b3cd80143be78eecb0f40198d222e70dcbdb4c45ba65de2602be",
-      "bytes": 6431918,
+      "hash": "sha256:bfc4a7cfa7340037dc7003d4125472660c7a553fe92b7d2b99450cba0d35b100",
+      "bytes": 6699311,
       "fields": 45,
-      "rows": 181006,
+      "rows": 195376,
       "schema": {
         "fields": [
           {
@@ -416,12 +416,12 @@
       }
     }
   ],
-  "updated_at": "2025-03-03T10:17:16",
+  "updated_at": "2025-05-02T10:17:28",
   "remote": {
     "host": "raw.githubusercontent.com",
     "user": "splor-mg",
     "repo": "dados-armazem-siafi-2025",
-    "ref": "adf8eeeec76eaa3d8b8d960911d05b52aa07b8e8",
-    "sha": "adf8eeeec76eaa3d8b8d960911d05b52aa07b8e8"
+    "ref": "43eb1baf1ed0e1d93fdd3c11e91f6564e4b1c7da",
+    "sha": "43eb1baf1ed0e1d93fdd3c11e91f6564e4b1c7da"
   }
 }
