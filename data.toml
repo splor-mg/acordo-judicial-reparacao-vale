@@ -2,12 +2,12 @@
 
 [packages.siad]
 
-path = "https://raw.githubusercontent.com/splor-mg/armazem-siad-dados/09cd8b8e72503b747392f96d7dd4e5d427537d67/datapackage.json"
+path = "https://raw.githubusercontent.com/splor-mg/dados-armazem-siad/8aa7ce5cc7bafd9374a1d6f5e7c6825b1a1254ff/datapackage.json"
 token = "GITHUB_PAT"
 
 [packages.siafi_2025]
 
-path = "https://raw.githubusercontent.com/splor-mg/dados-armazem-siafi-2025/43eb1baf1ed0e1d93fdd3c11e91f6564e4b1c7da/datapackage.json"
+path = "https://raw.githubusercontent.com/splor-mg/dados-armazem-siafi-2025/d3aa8741c6cfa38ac9b2262f41d057cb3e7929a5/datapackage.json"
 resources = ["execucao", "restos_pagar"]
 token = "GITHUB_PAT"
 
