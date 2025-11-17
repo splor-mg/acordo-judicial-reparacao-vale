@@ -5,8 +5,8 @@
 all: extract transform check
 
 extract:
-	dpm install
-	Rscript scripts/extract.R
+#	dpm install
+#	Rscript scripts/extract.R
 	dpm concat --package datapackages/siafi_2021/datapackage.json \
 			   --package datapackages/siafi_2022/datapackage.json \
 	           --package datapackages/siafi_2023/datapackage.json \
