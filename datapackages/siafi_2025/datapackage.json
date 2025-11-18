@@ -5,6 +5,7 @@
     {
       "name": "execucao",
       "type": "table",
+      "title": "execucao",
       "profile": "tabular-data-resource",
       "path": "data/execucao.csv.gz",
       "scheme": "file",
@@ -12,10 +13,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:08b49cfb4b8d515147960f2d57907fb1dc23b94d7affb471bbf1eee16735412e",
-      "bytes": 17836036,
+      "hash": "sha256:010bcb2516cb918e982bb2dfb2ef85b6ec1f03806f8159aa6f56462a3b87ec82",
+      "bytes": 23433387,
       "fields": 30,
-      "rows": 655224,
+      "rows": 833531,
       "schema": {
         "fields": [
           {
@@ -174,6 +175,7 @@
     {
       "name": "restos_pagar",
       "type": "table",
+      "title": "restos_pagar",
       "profile": "tabular-data-resource",
       "path": "data/restos_pagar.csv.gz",
       "scheme": "file",
@@ -181,10 +183,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:d52fe3944e30cd13229317ecb5e4762ea7a5eabf288491819c48569923325958",
-      "bytes": 8393773,
+      "hash": "sha256:879e2942586fccb0c3d8fc96bc758a5ec360070eff70dabb4f624781fa06edc5",
+      "bytes": 8624026,
       "fields": 45,
-      "rows": 226460,
+      "rows": 231439,
       "schema": {
         "fields": [
           {
@@ -416,12 +418,6 @@
       }
     }
   ],
-  "updated_at": "2025-09-01T10:19:33",
-  "remote": {
-    "host": "raw.githubusercontent.com",
-    "user": "splor-mg",
-    "repo": "dados-armazem-siafi-2025",
-    "ref": "3f3e3facebd7ee2e2cda13c0cfaf419dd8ccbd4c",
-    "sha": "3f3e3facebd7ee2e2cda13c0cfaf419dd8ccbd4c"
-  }
+  "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
+  "updated_at": "2025-11-03T10:17:51"
 }
