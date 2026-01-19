@@ -1,5 +1,6 @@
 {
-  "name": "dados-armazem-siafi",
+  "name": "dados-armazem-siafi-2025",
+  "title": "Sistema Integrado de Administração Financeira – SIAFI 2025",
   "profile": "tabular-data-package",
   "resources": [
     {
@@ -13,10 +14,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:010bcb2516cb918e982bb2dfb2ef85b6ec1f03806f8159aa6f56462a3b87ec82",
-      "bytes": 23433387,
+      "hash": "sha256:aa58fb38b8cace394f8775a62747e5393c376b4e3a9652a9df5eadee4db81163",
+      "bytes": 29350278,
       "fields": 30,
-      "rows": 833531,
+      "rows": 1043155,
       "schema": {
         "fields": [
           {
@@ -183,10 +184,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:879e2942586fccb0c3d8fc96bc758a5ec360070eff70dabb4f624781fa06edc5",
-      "bytes": 8624026,
+      "hash": "sha256:2fcaa357a7df2953276946da6fa4820d513f1a086df584ddee420c738976d53e",
+      "bytes": 8953497,
       "fields": 45,
-      "rows": 231439,
+      "rows": 238968,
       "schema": {
         "fields": [
           {
@@ -419,5 +420,5 @@
     }
   ],
   "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
-  "updated_at": "2025-11-03T10:17:51"
+  "updated_at": "2026-01-09T10:17:45"
 }

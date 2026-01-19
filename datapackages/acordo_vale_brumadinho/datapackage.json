@@ -22,8 +22,8 @@
             "type": "string"
           },
           {
-            "name": "valor_iniciativa",
-            "type": "number"
+            "name": "valor_da_iniciativa",
+            "type": "string"
           }
         ]
       }
