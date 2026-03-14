@@ -1,2 +1,9 @@
 dpm @ git+https://github.com/splor-mg/dpm.git@main
 frictionless[excel]
+pandas
+requests
+frictionless
+pyarrow
+curl-cffi
+
+
