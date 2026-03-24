@@ -391,5 +391,12 @@
       }
     }
   ],
-  "updated_at": "2024-02-22T16:50:18"
+  "updated_at": "2024-02-22T16:50:18",
+  "remote": {
+    "host": "raw.githubusercontent.com",
+    "user": "splor-mg",
+    "repo": "armazem-siafi-dados-2023",
+    "ref": "1d6a467ed58e11cde2f57c816f9cb46d8a9451b5",
+    "sha": "1d6a467ed58e11cde2f57c816f9cb46d8a9451b5"
+  }
 }

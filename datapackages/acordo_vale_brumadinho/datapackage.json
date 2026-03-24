@@ -1,12 +1,16 @@
 {
+  "name": "acordo_vale_brumadinho",
   "resources": [
     {
       "name": "projetos_vale",
       "path": "projetos_vale.csv",
-      "profile": "tabular-data-resource",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
+      "hash": "sha256:46c9e0930e8b3ae6113a10e1c18e56c3e36dce2de006bfdcd880de3d389e3f8b",
+      "bytes": 8626,
+      "fields": 4,
+      "rows": 73,
       "schema": {
         "fields": [
           {
@@ -23,11 +27,11 @@
           },
           {
             "name": "valor_da_iniciativa",
-            "type": "string"
+            "type": "number"
           }
         ]
-      }
+      },
+      "profile": "tabular-data-resource"
     }
-  ],
-  "name": "acordo_vale_brumadinho"
+  ]
 }

@@ -14,10 +14,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:aa58fb38b8cace394f8775a62747e5393c376b4e3a9652a9df5eadee4db81163",
-      "bytes": 29350278,
+      "hash": "sha256:900ff8a71ede2603b2d755cec7edb7f2fc36fb5d0a4051a90684adf84c5746ae",
+      "bytes": 27236973,
       "fields": 30,
-      "rows": 1043155,
+      "rows": 1060835,
       "schema": {
         "fields": [
           {
@@ -184,10 +184,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:2fcaa357a7df2953276946da6fa4820d513f1a086df584ddee420c738976d53e",
-      "bytes": 8953497,
+      "hash": "sha256:b851b69d28fb393942244d73b53b439579a174e6051574801e47ee2b1cba85fa",
+      "bytes": 8745853,
       "fields": 45,
-      "rows": 238968,
+      "rows": 238964,
       "schema": {
         "fields": [
           {
@@ -420,5 +420,12 @@
     }
   ],
   "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
-  "updated_at": "2026-01-09T10:17:45"
+  "updated_at": "2026-01-22T11:27:05",
+  "remote": {
+    "host": "raw.githubusercontent.com",
+    "user": "splor-mg",
+    "repo": "dados-armazem-siafi-2025",
+    "ref": "6aeefd6339b9cfb1c80659c5af16ce4282fb6d34",
+    "sha": "6aeefd6339b9cfb1c80659c5af16ce4282fb6d34"
+  }
 }

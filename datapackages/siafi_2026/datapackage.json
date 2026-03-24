@@ -1,10 +1,12 @@
 {
-  "name": "armazem-siafi-dados",
+  "name": "dados-armazem-siafi-2026",
+  "title": "Sistema Integrado de Administração Financeira – SIAFI 2026",
   "profile": "tabular-data-package",
   "resources": [
     {
       "name": "execucao",
       "type": "table",
+      "title": "execucao",
       "profile": "tabular-data-resource",
       "path": "data/execucao.csv.gz",
       "scheme": "file",
@@ -12,10 +14,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:bc11d1810c67cca15837a87a18807a94321174fe198c25e692e47485cfd8d90a",
-      "bytes": 26719793,
-      "fields": 29,
-      "rows": 1011195,
+      "hash": "sha256:9de1aea86271730c2e97b9e404563b372564b808ea88cec4be56af048328e838",
+      "bytes": 4253088,
+      "fields": 30,
+      "rows": 174152,
       "schema": {
         "fields": [
           {
@@ -52,6 +54,11 @@
             "name": "funcao_cod",
             "type": "integer",
             "source": "Função - Código"
+          },
+          {
+            "name": "subfuncao_cod",
+            "type": "integer",
+            "source": "Subfunção - Código"
           },
           {
             "name": "programa_cod",
@@ -169,6 +176,7 @@
     {
       "name": "restos_pagar",
       "type": "table",
+      "title": "restos_pagar",
       "profile": "tabular-data-resource",
       "path": "data/restos_pagar.csv.gz",
       "scheme": "file",
@@ -176,10 +184,10 @@
       "mediatype": "text/csv",
       "compression": "gz",
       "encoding": "utf-8",
-      "hash": "sha256:d077d0e253b3c71ba840d673706665a9babdc488b7c573647199ec08a66b3119",
-      "bytes": 11163902,
-      "fields": 41,
-      "rows": 329154,
+      "hash": "sha256:117ba03a2b12393d8c29bfd0aea739e908d7a65e0ae353b42f151f4b6a3a9eda",
+      "bytes": 6021147,
+      "fields": 45,
+      "rows": 182155,
       "schema": {
         "fields": [
           {
@@ -386,17 +394,38 @@
             "name": "vlr_anulacao_retencao_rpp",
             "type": "number",
             "source": "Valor Anulação Retenção Processado"
+          },
+          {
+            "name": "vlr_anulacao_pago_antecipado",
+            "type": "number",
+            "source": "Valor Anulação Pago Antecipado"
+          },
+          {
+            "name": "vlr_pago_antecipado_exercicio",
+            "type": "number",
+            "source": "Valor Pago Antecipado Exercício"
+          },
+          {
+            "name": "vlr_pago_rpnp",
+            "type": "number",
+            "source": "Valor Pago Não Processado"
+          },
+          {
+            "name": "vlr_retencao_rpnp",
+            "type": "number",
+            "source": "Valor Retenção Não Processado"
           }
         ]
       }
     }
   ],
-  "updated_at": "2024-02-23T13:04:44",
+  "owner_org": "secretaria-de-estado-de-planejamento-e-gestao-seplag",
+  "updated_at": "2026-03-24T10:42:48",
   "remote": {
     "host": "raw.githubusercontent.com",
     "user": "splor-mg",
-    "repo": "armazem-siafi-dados-2021",
-    "ref": "8b6dbfa40f8f38b0844c51155f6601522cc577e5",
-    "sha": "8b6dbfa40f8f38b0844c51155f6601522cc577e5"
+    "repo": "dados-armazem-siafi-2026",
+    "ref": "main",
+    "sha": "94a4a8d57f4f01170bc95e5d2605d16301c3dd84"
   }
 }
