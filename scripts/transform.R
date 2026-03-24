@@ -1,6 +1,6 @@
 library(data.table)
+setDTthreads(1L)
 library(dplyr)
-library(writexl)
 library(relatorios)
 
 siafi <- dpm::read_datapackage("datapackages/siafi/datapackage.json")
@@ -8,17 +8,20 @@ vale <- dpm::read_datapackage("datapackages/acordo_vale_brumadinho/datapackage.j
 siad <- dpm::read_datapackage("datapackages/siad/datapackage.json")
 
 projetos <- vale$projetos_vale[!duplicated(num_contrato_entrada)]
+ids_contrato <- unique(projetos$num_contrato_entrada)
 
-exec_rp <- siafi$restos_pagar[
-  ano %in% 2021:2026 & num_contrato_entrada %in% projetos$num_contrato_entrada
+exec_rp <- siafi$restos_pagar[num_contrato_entrada %in% ids_contrato][
+  ano >= 2021L & ano <= 2026L &
+    (ano != 2026L | (ano == 2026L & mes_cod %in% 1L:2L))
 ]
 
 exec_rp[, vlr_pago_rpnp := vlr_saldo_rpp + vlr_despesa_liquidada_rpnp - vlr_despesa_liquidada_pagar]
 exec_rp[, vlr_pago_rp := vlr_pago_rpp + vlr_pago_rpnp]
 exec_rp[, vlr_cancelado_rpp := vlr_cancelado_rpp + vlr_desconto_rpp]
 
-exec_desp <- siafi$execucao[
-  ano %in% 2021:2026 & num_contrato_entrada %in% projetos$num_contrato_entrada
+exec_desp <- siafi$execucao[num_contrato_entrada %in% ids_contrato][
+  ano >= 2021L & ano <= 2026L &
+    (ano != 2026L | (ano == 2026L & mes_cod %in% 1L:2L))
 ]
 
 execucao <- rbind(exec_desp, exec_rp, fill = TRUE)
@@ -111,7 +114,7 @@ dt$ANO <- 2026
 dt <- adiciona_desc(dt)
 dt$ANO <- NULL
 dt$ANEXO <- NULL
-dt$VALOR_INICIATIVA <- NULL
+if ("VALOR_DA_INICIATIVA" %in% names(dt)) dt[, VALOR_DA_INICIATIVA := NULL]
 
 fwrite(dt, "data/acordo-judicial-reparacao-vale.csv", bom = TRUE, dec = ",", sep = ";")
 
